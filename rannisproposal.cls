@@ -22,10 +22,18 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
 
+\ifLuaTeX
+\RequirePackage{fontspec}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+\RequirePackage{termes-otf}
+\else
 \PassOptionsToPackage{T1}{fontenc}
 \RequirePackage{fontenc}
-\RequirePackage{mathptmx}
+\RequirePackage{tgtermes}
 \RequirePackage{tgheros}
+\RequirePackage{tgcursor}
+\fi
 
 % Required spacing
 \RequirePackage{setspace}
