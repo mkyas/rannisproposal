@@ -37,8 +37,7 @@
 
 % Required spacing
 \RequirePackage{setspace}
-%\onehalfspacing
-\spacing{1.125}
+\spacing{1.5}
 \normalsize
 
 % Page layout
@@ -67,8 +66,8 @@
 
 \RequirePackage{titlesec}
 \renewcommand{\thesection}{\alph{section}}
-\titleformat{\section}{\scshape\bfseries\color{Heading}}{\thesection.}{5pt}{}[\hrule]
-\titleformat{\subsection}{\bfseries\color{Heading}}{\thesubsection.}{5pt}{}
+\titleformat{\section}{\singlespacing\scshape\bfseries\color{Heading}}{\thesection.}{5pt}{}[\hrule]
+\titleformat{\subsection}{\singlespacing\bfseries\color{Heading}}{\thesubsection.}{5pt}{}
 
 % Graphics
 \RequirePackage{graphicx}
@@ -80,6 +79,7 @@
 
 \renewcommand{\maketitle}{%
   \thispagestyle{empty}%
+  \begingroup\spacing{1.125}
   \begin{center}
     \includegraphics[width=4.45cm]{rannsoknasjodur.png}
   \end{center}
@@ -110,6 +110,7 @@
   \end{center}
   \vfill
   {\color{Heading}\hrule height 2pt}
+  \endgroup
   \newpage
 }
 % Bibliography
